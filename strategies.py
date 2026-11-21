@@ -1,4 +1,5 @@
-from game_rules import COOPERATE, DEFECT
+from game_rules import COOPERATE
+
 
 #defining always defect strat
 def always_defect(my_history, opponent_history):
