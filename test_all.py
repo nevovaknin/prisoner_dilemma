@@ -1,6 +1,7 @@
 from strategies import always_defect, tit_for_tat, always_opposite
 from game_rules import COOPERATE, DEFECT, points
 from play_game import play_game
+from tournament import play_tournament
 
 # always defect tests
 def test_always_defect_on_first_round():
@@ -42,3 +43,6 @@ def test_play_game_tit_for_tat_vs_always_defect():
 def test_play_game_with_zero_rounds():
     assert play_game(tit_for_tat, always_defect, 0, points) == (0, 0)
 
+def test_play_tournament_totals():
+    result = play_tournament([tit_for_tat, always_defect, always_opposite], 1, 10, points)
+    assert result == {'tit_for_tat': 30, 'always_defect': 64, 'always_opposite': 26}
