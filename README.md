@@ -1,4 +1,4 @@
-# Iterated Prisoner's Dilemma
+# Prisoner's Dilemma
 
 A simple Python implementation of the iterated prisoner's dilemma. Two strategies play a number of rounds against each other, and the total score of each player is returned. A round-robin tournament between several strategies is also included.
 
